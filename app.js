@@ -22,6 +22,7 @@ app.use((err, req, res, next) => {
 });
 
 // Démarrage du serveur
-app.listen(3000, () => {
-  console.log('✅ Dialogo API running at http://localhost:3000');
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`✅ Dialogo API running at http://localhost:${PORT}`);
 });
